@@ -55,7 +55,7 @@ pipeline{
             steps {
                 sh '''
                     docker pull yoanab/sregci2
-                    docker compose -f docker-compose.yml up -d
+                    HOST_PORT=3031 docker compose -f docker-compose.yml up -d
                 '''  
             }
             post{
